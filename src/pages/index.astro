@@ -1,146 +1,144 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const presenters = [
-  { name: "Dr. Papp János", role: "orvos, fájdalomterápiás szakértő", mark: "PJ" },
-  { name: "Dr. Tóth Eszter", role: "neurológus, kutató", mark: "TE" },
-  { name: "Kovács Anna", role: "gyógyszerész, kannabinoid tanácsadó", mark: "KA" },
-  { name: "Dr. Szabó Gábor", role: "addiktológus és pszichiáter", mark: "SG" },
-];
-
-const sponsors = [
-  { name: "MOKE", detail: "Szervező", mark: "M" },
-  { name: "Cannabicum", detail: "Fő támogató", mark: "C" },
-  { name: "Green Health", detail: "Szakmai partner", mark: "GH" },
-  { name: "Herbária", detail: "Támogató", mark: "H" },
-];
 ---
 
 <Layout
-  title="Cannabicum 2027 | Budapest"
-  description="Cannabicum konferencia a gyógyászati kannabiszról, 2027. május 15–16-án Budapesten."
+  title="Cannabicum | Magyar Orvosi Kannabisz Konferencia"
+  description="A Cannabicum a magyar orvosi kannabisz szakmai párbeszédének fóruma. Értesítünk, amikor megnyílik a weboldal."
 >
   <main>
     <nav class="nav shell" aria-label="Fő navigáció">
-      <a class="brand" href="/" aria-label="Cannabicum kezdőlap"><span>✳</span> CANNABICUM</a>
-      <a class="nav-link" href="#helyszin">Helyszín <span>↗</span></a>
+      <a class="brand" href="/" aria-label="Cannabicum kezdőlap">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Cannabicum</span>
+      </a>
+      <a class="nav-cta" href="#kapcsolat">Kapcsolat <span>↘</span></a>
     </nav>
 
     <section class="hero shell">
       <div class="hero-copy">
-        <p class="kicker">Nemzetközi konferencia · Budapest</p>
-        <h1>A kannabisz<br /><em>új korszaka</em></h1>
-        <p class="lead">Két nap tudomány, tapasztalat és párbeszéd a gyógyászati kannabisz jövőjéről.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#program">Program megtekintése <span>↗</span></a>
-          <a class="text-link" href="#helyszin">Találkozzunk Budapesten <span>↓</span></a>
-        </div>
+        <p class="eyebrow">Magyar Orvosi Kannabisz Konferencia</p>
+        <h1>A tudás<br /><em>összeköt.</em></h1>
+        <p class="intro">
+          Egy hely, ahol az orvostudomány, a kutatás és a valódi tapasztalatok találkoznak.
+          A Cannabicum hamarosan megnyitja kapuit.
+        </p>
+        <a class="primary-button" href="#kapcsolat">Értesítést kérek <span>↗</span></a>
       </div>
-      <div class="hero-art" aria-label="Absztrakt zöld növényi illusztráció">
-        <div class="sun"></div>
-        <div class="leaf leaf-one"></div>
-        <div class="leaf leaf-two"></div>
-        <div class="leaf leaf-three"></div>
-        <div class="leaf leaf-four"></div>
-        <div class="art-caption">TUDOMÁNY<br /><strong>×</strong> EMBER<br /><span>×</span> JÖVŐ</div>
-        <span class="stamp">2027<br />BUDAPEST</span>
+      <div class="hero-visual" aria-label="Cannabicum logó">
+        <div class="orbit orbit-outer"></div>
+        <div class="orbit orbit-inner"></div>
+        <div class="visual-word">cannabicum</div>
+        <p class="visual-caption">TUDOMÁNY<br /><span>×</span> EMBER<br /><strong>×</strong> JÖVŐ</p>
       </div>
     </section>
 
-    <div class="date-bar">
-      <div class="shell date-inner">
-        <div><span class="label">DÁTUM</span><strong>15—16. MÁJUS 2027</strong></div>
-        <div><span class="label">HELYSZÍN</span><strong>HERMAN OTTÓ KONFERENCIAKÖZPONT</strong></div>
-        <div><span class="label">VÁROS</span><strong>BUDAPEST, MAGYARORSZÁG</strong></div>
-      </div>
-    </div>
-
-    <section class="section shell" id="program">
-      <div class="section-heading">
-        <p class="kicker">Kik lépnek színpadra</p>
-        <h2>Ismerd meg a<br /><em>hangokat.</em></h2>
-        <p class="section-intro">Gyakorló szakemberek, kutatók és úttörők osztják meg tudásukat a kannabisz lehetőségeiről.</p>
-      </div>
-      <div class="presenter-grid">
-        {presenters.map((presenter, index) => (
-          <article class="presenter">
-            <div class:list={["portrait", `portrait-${index + 1}`]}><span>{presenter.mark}</span></div>
-            <div class="presenter-info"><h3>{presenter.name}</h3><p>{presenter.role}</p></div>
-            <span class="arrow">↗</span>
-          </article>
-        ))}
+    <section class="notice">
+      <div class="shell notice-inner">
+        <span class="notice-dot" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">Hamarosan</p>
+          <h2>Értesítünk, ha megnyílik a weboldal.</h2>
+        </div>
+        <a href="#kapcsolat" class="notice-link">Feliratkozom <span>↗</span></a>
       </div>
     </section>
 
-    <section class="location-section" id="helyszin">
-      <div class="shell location-grid">
-        <div class="location-copy">
-          <p class="kicker">A találkozás helye</p>
-          <h2>Budapest,<br /><em>itt vagyunk.</em></h2>
-          <p>Az inspiráló Herman Ottó Konferenciaközpont ad otthont a Cannabicum két napjának.</p>
-          <a class="button button-light" href="https://maps.app.goo.gl/1P4o1mBmxausJwsZA" target="_blank" rel="noreferrer">Útvonaltervezés <span>↗</span></a>
-        </div>
-        <div class="map-card">
-          <div class="map-lines"></div>
-          <div class="map-label label-top">BUDAPEST</div>
-          <div class="map-label label-bottom">HERMAN OTTÓ<br />KONFERENCIAKÖZPONT</div>
-          <div class="map-pin">✳</div>
-          <div class="map-road road-one"></div><div class="map-road road-two"></div><div class="map-road road-three"></div>
+    <section class="about shell">
+      <div>
+        <p class="eyebrow">Miért a Cannabicum?</p>
+        <h2>Nyitott párbeszéd<br /><em>jobb döntésekért.</em></h2>
+      </div>
+      <div class="about-copy">
+        <p>
+          Független, szakmai közösséget építünk az orvosi kannabisz hazai jövőjéért.
+          Hiteles információt, érthető tudást és egymásra figyelő beszélgetéseket hozunk közelebb.
+        </p>
+        <div class="principles">
+          <span><b>01</b> Tudomány</span>
+          <span><b>02</b> Párbeszéd</span>
+          <span><b>03</b> Együttműködés</span>
         </div>
       </div>
     </section>
 
-    <section class="section sponsors-section shell">
-      <div class="section-heading sponsor-heading">
-        <p class="kicker">Akik velünk vannak</p>
-        <h2>Partnereink &<br /><em>támogatóink.</em></h2>
+    <section class="contact" id="kapcsolat">
+      <div class="shell contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Maradj kapcsolatban</p>
+          <h2>Legyél<br /><em>az elsők között.</em></h2>
+          <p>Add meg az elérhetőséged, és szólunk, amint új hírekkel jelentkezünk.</p>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="307a6957-6a89-4638-bf46-83e4d7251711" />
+          <input type="hidden" name="subject" value="Új Cannabicum érdeklődő" />
+          <input type="hidden" name="from_name" value="Cannabicum weboldal" />
+          <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
+          <label for="name">Név</label>
+          <input id="name" name="name" type="text" placeholder="Hogy szólíthatunk?" required />
+          <label for="email">E-mail-cím</label>
+          <input id="email" name="email" type="email" placeholder="te@email.hu" required />
+          <label for="message">Üzenet <span>(opcionális)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Írj nekünk pár sort…"></textarea>
+          <button type="submit">Értesítést kérek <span>↗</span></button>
+          <small>Az adataidat kizárólag a kapcsolatfelvételhez használjuk.</small>
+        </form>
       </div>
-      <div class="sponsor-grid">
-        {sponsors.map((sponsor) => (
-          <div class="sponsor"><div class="sponsor-mark">{sponsor.mark}</div><div><strong>{sponsor.name}</strong><small>{sponsor.detail}</small></div></div>
-        ))}
-      </div>
-      <p class="organizer"><span>✳</span> A Cannabicum konferencia szervezője a <a href="https://orvosikannabisz.com" target="_blank" rel="noreferrer">Magyar Orvosi Kannabisz Egyesület (MOKE)</a>.</p>
     </section>
 
-    <footer class="footer shell"><a class="brand" href="/"><span>✳</span> CANNABICUM</a><p>Találkozunk 2027-ben.</p><a href="mailto:hello@cannabicum.hu">hello@cannabicum.hu</a></footer>
+    <footer class="footer shell">
+      <a class="brand" href="/" aria-label="Cannabicum kezdőlap"><span class="brand-mark" aria-hidden="true"></span><span>Cannabicum</span></a>
+      <p>Magyar Orvosi Kannabisz Konferencia</p>
+      <a href="mailto:hello@cannabicum.hu">hello@cannabicum.hu</a>
+    </footer>
   </main>
 </Layout>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-  :global(:root) { font-family: "Space Grotesk", sans-serif; color: #102318; background: #f5f2ea; }
+  @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+  :global(:root) { font-family: "Manrope", sans-serif; color: #151515; background: #f7f8f2; }
   :global(*) { box-sizing: border-box; }
   :global(html) { scroll-behavior: smooth; }
-  :global(body) { margin: 0; background: #f5f2ea; }
-  .shell { max-width: 1200px; margin: auto; padding-left: 4vw; padding-right: 4vw; }
+  :global(body) { margin: 0; background: #f7f8f2; }
+  .shell { width: min(1240px, 100%); margin: auto; padding-left: 5vw; padding-right: 5vw; }
   .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; padding-bottom: 28px; }
-  .brand { color: #102318; text-decoration: none; letter-spacing: .13em; font-size: .8rem; font-weight: 700; }
-  .brand span { color: #ec6d3d; font-size: 1.25rem; margin-right: 8px; }
-  .nav-link, .text-link { color: #102318; text-decoration: none; font-size: .78rem; font-weight: 600; }
-  .nav-link span { color: #e66d3b; margin-left: 8px; }
-  .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 560px; padding-top: 65px; padding-bottom: 80px; gap: 4vw; }
-  .kicker, .label { color: #e36737; font-family: "DM Mono", monospace; font-size: .66rem; letter-spacing: .13em; text-transform: uppercase; }
-  .kicker { margin: 0 0 27px; }
-  h1, h2 { font-size: clamp(3.7rem, 7vw, 6.8rem); line-height: .87; letter-spacing: -.075em; margin: 0; font-weight: 600; }
-  h1 em, h2 em { color: #23643f; font-style: normal; }
-  .lead { max-width: 390px; margin: 34px 0 0; font-size: 1.08rem; line-height: 1.55; color: #536158; }
-  .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 40px; }
-  .button { display: inline-flex; align-items: center; gap: 32px; padding: 16px 20px; text-decoration: none; font-size: .76rem; font-weight: 600; }
-  .button span { font-size: 1.1rem; }
-  .button-dark { background: #102318; color: #f5f2ea; }
-  .button-light { background: #f4c847; color: #102318; margin-top: 30px; }
-  .text-link span { color: #e36737; margin-left: 15px; font-size: 1.1rem; }
-  .hero-art { position: relative; overflow: hidden; min-height: 430px; background: #bbd54d; }
-  .sun { position: absolute; width: 240px; height: 240px; background: #f5b735; border-radius: 50%; top: 40px; right: 25px; }
-  .leaf { position: absolute; width: 125px; height: 280px; background: #17623e; border-radius: 100% 0 100% 0; transform: rotate(35deg); }
-  .leaf:after { content: ""; position: absolute; width: 2px; height: 240px; background: #bbd54d; left: 50%; top: 20px; transform: rotate(12deg); }
-  .leaf-one { right: 155px; top: 50px; transform: rotate(28deg); }.leaf-two { right: 48px; top: 135px; transform: rotate(80deg) scale(.85); }.leaf-three { left: 90px; bottom: -35px; transform: rotate(-57deg) scale(.8); }.leaf-four { left: 178px; bottom: -80px; transform: rotate(-13deg) scale(.7); }
-  .art-caption { position: absolute; left: 28px; bottom: 26px; color: #f5f2ea; font-family: "DM Mono", monospace; font-size: .65rem; line-height: 1.4; letter-spacing: .1em; }.art-caption strong { color: #f5b735; }.art-caption span { color: #e36737; }
-  .stamp { position: absolute; top: 20px; left: 22px; color: #102318; font-family: "DM Mono", monospace; font-size: .58rem; line-height: 1.6; letter-spacing: .15em; }
-  .date-bar { background: #1b5637; color: #f5f2ea; }.date-inner { display: grid; grid-template-columns: .7fr 1.6fr 1fr; padding-top: 24px; padding-bottom: 24px; gap: 25px; }.date-inner > div { display: flex; flex-direction: column; gap: 8px; border-right: 1px solid rgba(245,242,234,.25); }.date-inner > div:last-child { border: 0; }.date-inner strong { font-size: .78rem; letter-spacing: .08em; }.date-inner .label { color: #f4c847; font-size: .58rem; }
-  .section { padding-top: 120px; padding-bottom: 120px; }.section-heading { display: grid; grid-template-columns: 1fr 1.4fr 1fr; align-items: end; gap: 25px; }.section-heading h2 { font-size: clamp(3rem, 5.5vw, 5.5rem); }.section-intro { color: #536158; line-height: 1.55; max-width: 270px; margin: 0; }.presenter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 70px; }.presenter { position: relative; }.portrait { height: 280px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); font-size: 2rem; font-weight: 700; }.portrait-1 { background: #e5a344; }.portrait-2 { background: #376d54; }.portrait-3 { background: #e46d3d; }.portrait-4 { background: #bdcf53; color: #1b5637; }.portrait span { border: 1px solid currentColor; border-radius: 50%; padding: 34px 20px; }.presenter-info { padding-top: 16px; }.presenter h3 { font-size: .95rem; margin: 0 0 6px; }.presenter p { color: #69756d; font-size: .75rem; margin: 0; }.arrow { position: absolute; top: 15px; right: 15px; background: #f5f2ea; padding: 9px 11px; font-size: 1rem; }
-  .location-section { background: #1b5637; color: #f5f2ea; }.location-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9vw; align-items: center; padding-top: 100px; padding-bottom: 100px; }.location-copy .kicker { color: #f4c847; }.location-copy h2 { font-size: clamp(3.3rem, 6vw, 6rem); }.location-copy p:not(.kicker) { color: #b9c8b9; line-height: 1.6; max-width: 330px; margin-top: 30px; }.map-card { position: relative; height: 350px; overflow: hidden; background: #d8e0bc; color: #1b5637; }.map-lines { position: absolute; inset: -20%; background: repeating-linear-gradient(24deg, transparent 0 34px, rgba(27,86,55,.16) 35px 37px), repeating-linear-gradient(116deg, transparent 0 70px, rgba(27,86,55,.1) 71px 73px); transform: rotate(-10deg); }.map-card:before { content: "DUNA"; position: absolute; font-family: "DM Mono"; font-size: 5rem; letter-spacing: .1em; color: rgba(76,143,141,.27); transform: rotate(-64deg); left: 15px; top: 130px; }.map-road { position: absolute; height: 3px; width: 115%; background: #f5f2ea; transform: rotate(21deg); opacity: .8; }.road-one { top: 90px; left: -20px; }.road-two { top: 220px; left: -20px; transform: rotate(-14deg); }.road-three { top: 160px; left: 10px; transform: rotate(72deg); }.map-label { position: absolute; font-family: "DM Mono"; font-size: .58rem; letter-spacing: .08em; }.label-top { top: 25px; right: 28px; }.label-bottom { bottom: 22px; left: 24px; line-height: 1.5; }.map-pin { position: absolute; left: 53%; top: 46%; display: grid; place-items: center; width: 50px; height: 50px; background: #e36737; border-radius: 50% 50% 50% 0; color: #f5f2ea; transform: rotate(-45deg); font-size: 1.5rem; }.map-pin::first-letter { transform: rotate(45deg); }
-  .sponsors-section { padding-bottom: 95px; }.sponsor-heading { display: block; }.sponsor-heading h2 { margin-top: 20px; }.sponsor-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 65px; }.sponsor { display: flex; align-items: center; gap: 15px; border-top: 1px solid #d5d6c8; padding-top: 20px; }.sponsor-mark { display: grid; place-items: center; width: 47px; height: 47px; border-radius: 50%; background: #e36737; color: #f5f2ea; font-weight: 700; font-size: .8rem; }.sponsor:nth-child(2) .sponsor-mark { background: #1b5637; }.sponsor:nth-child(3) .sponsor-mark { background: #f4c847; color: #1b5637; }.sponsor:nth-child(4) .sponsor-mark { background: #bbd54d; color: #1b5637; }.sponsor strong, .sponsor small { display: block; }.sponsor strong { font-size: .9rem; }.sponsor small { color: #69756d; font-size: .68rem; margin-top: 4px; }.organizer { margin: 75px 0 0; border-top: 1px solid #d5d6c8; padding-top: 24px; color: #69756d; font-size: .75rem; }.organizer span { color: #e36737; margin-right: 8px; }.organizer a { color: #1b5637; font-weight: 700; }.footer { border-top: 1px solid #d5d6c8; padding-top: 28px; padding-bottom: 35px; display: flex; justify-content: space-between; align-items: center; font-size: .7rem; }.footer p { color: #69756d; }.footer > a:last-child { color: #1b5637; }
-  @media (max-width: 700px) { .hero, .location-grid { grid-template-columns: 1fr; }.hero { padding-top: 35px; }.hero-art { min-height: 330px; }.date-inner { grid-template-columns: 1fr; gap: 16px; }.date-inner > div { border-right: 0; border-bottom: 1px solid rgba(245,242,234,.25); padding-bottom: 12px; }.section { padding-top: 75px; padding-bottom: 75px; }.section-heading { display: block; }.section-intro { margin-top: 28px; }.presenter-grid, .sponsor-grid { grid-template-columns: repeat(2, 1fr); margin-top: 45px; }.portrait { height: 190px; }.location-grid { gap: 45px; padding-top: 70px; padding-bottom: 70px; }.footer { flex-wrap: wrap; gap: 15px; }.footer p { order: 3; width: 100%; margin: 0; } }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: #151515; text-decoration: none; font-size: .9rem; font-weight: 800; letter-spacing: -.03em; }
+  .brand-mark { width: 25px; height: 25px; display: inline-block; border-radius: 50%; background: repeating-conic-gradient(#62bd18 0 9deg, transparent 9deg 17deg); mask: radial-gradient(circle, transparent 0 37%, #000 39%); }
+  .nav-cta { color: #151515; text-decoration: none; font-size: .75rem; font-weight: 700; }
+  .nav-cta span, .primary-button span, .notice-link span, button span { color: #61bb18; font-size: 1.2rem; margin-left: 20px; }
+  .hero { display: grid; grid-template-columns: .9fr 1.1fr; gap: 5vw; align-items: center; min-height: 620px; padding-top: 70px; padding-bottom: 95px; }
+  .eyebrow { margin: 0 0 22px; color: #5a9e1b; font: 500 .65rem/1.4 "DM Mono", monospace; letter-spacing: .14em; text-transform: uppercase; }
+  h1, h2 { margin: 0; font-weight: 700; letter-spacing: -.08em; line-height: .92; }
+  h1 { font-size: clamp(4.5rem, 9vw, 8.5rem); }
+  h2 { font-size: clamp(2.8rem, 5.5vw, 5.6rem); }
+  h1 em, h2 em { color: #62b916; font-style: normal; }
+  .intro { max-width: 390px; margin: 30px 0 0; color: #60665d; font-size: 1rem; line-height: 1.7; }
+  .primary-button, button { display: inline-flex; align-items: center; border: 0; background: #151515; color: #f7f8f2; text-decoration: none; cursor: pointer; font: 700 .75rem "Manrope", sans-serif; padding: 17px 20px; margin-top: 34px; }
+  .hero-visual { position: relative; min-height: 470px; overflow: hidden; background: #d9efb8; }
+  .orbit { position: absolute; border: 18px dashed #62bd18; border-radius: 50%; transform: rotate(-18deg); }
+  .orbit-outer { width: 520px; height: 520px; top: -25px; left: -35px; }
+  .orbit-inner { width: 390px; height: 390px; top: 40px; left: 30px; border-width: 12px; border-color: #9bd220; }
+  .visual-word { position: absolute; left: 11%; top: 43%; color: #151515; font-size: clamp(2.3rem, 5.2vw, 5.4rem); font-weight: 400; letter-spacing: -.1em; }
+  .visual-caption { position: absolute; right: 25px; bottom: 24px; color: #37630f; font: .62rem/1.6 "DM Mono", monospace; letter-spacing: .13em; }
+  .visual-caption span { color: #f48b31; }.visual-caption strong { color: #151515; }
+  .notice { background: #173d29; color: #f7f8f2; }
+  .notice-inner { display: flex; align-items: center; gap: 24px; padding-top: 26px; padding-bottom: 26px; }
+  .notice .eyebrow { margin: 0 0 5px; color: #a8dc28; }.notice h2 { font-size: clamp(1.4rem, 2.6vw, 2.4rem); letter-spacing: -.05em; }
+  .notice-dot { width: 13px; height: 13px; flex: 0 0 auto; border-radius: 50%; background: #a8dc28; box-shadow: 0 0 0 7px rgba(168,220,40,.12); }
+  .notice-link { margin-left: auto; color: #f7f8f2; text-decoration: none; font-size: .75rem; font-weight: 700; white-space: nowrap; }
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; padding-top: 130px; padding-bottom: 130px; }
+  .about-copy { align-self: end; color: #60665d; line-height: 1.7; max-width: 420px; }.about-copy p { margin: 0; }
+  .principles { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 45px; color: #151515; font: .65rem "DM Mono", monospace; }
+  .principles span { border-top: 1px solid #cfd5c8; padding-top: 12px; }.principles b { margin-right: 8px; color: #62b916; font-weight: 400; }
+  .contact { background: #c7e781; }.contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 9vw; padding-top: 110px; padding-bottom: 110px; }
+  .contact-copy p:last-child { max-width: 300px; margin-top: 30px; color: #395226; line-height: 1.6; }.contact-form { display: flex; flex-direction: column; }
+  label { margin-top: 18px; color: #35501e; font: 500 .64rem "DM Mono", monospace; text-transform: uppercase; letter-spacing: .1em; } label:first-of-type { margin-top: 0; } label span { text-transform: none; letter-spacing: 0; opacity: .7; }
+  input, textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(21,21,21,.35); border-radius: 0; background: transparent; padding: 11px 0; color: #151515; font: 1rem "Manrope", sans-serif; outline: none; } input:focus, textarea:focus { border-color: #151515; } textarea { resize: vertical; }
+  input::placeholder, textarea::placeholder { color: #5d7146; }.hidden { display: none; }
+  button { align-self: flex-start; margin-top: 28px; }.contact-form small { margin-top: 16px; color: #4e653b; font-size: .65rem; }
+  .footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 27px; padding-bottom: 30px; font-size: .68rem; }.footer p { color: #72786f; }.footer > a:last-child { color: #31571d; text-decoration: none; }
+  @media (max-width: 700px) {
+    .hero, .about, .contact-grid { grid-template-columns: 1fr; }.hero { padding-top: 50px; padding-bottom: 60px; }.hero-visual { min-height: 350px; margin-top: 15px; }.orbit-outer { width: 390px; height: 390px; }.orbit-inner { width: 290px; height: 290px; }.visual-word { top: 43%; }
+    .notice-inner { align-items: flex-start; flex-wrap: wrap; }.notice-link { margin-left: 37px; }.about { gap: 50px; padding-top: 80px; padding-bottom: 80px; }.contact-grid { gap: 55px; padding-top: 75px; padding-bottom: 75px; }.footer { align-items: flex-start; flex-direction: column; gap: 10px; }
+  }
 </style>
