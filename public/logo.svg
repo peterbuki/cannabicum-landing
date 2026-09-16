@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1182 474" role="img" aria-labelledby="title desc">
+  <title id="title">Cannabicum</title>
+  <desc id="desc">Cannabicum Magyar Orvosi Kannabisz Konferencia</desc>
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4da83a"/>
+      <stop offset="1" stop-color="#a5c61d"/>
+    </linearGradient>
+    <path id="ray" d="M116 105h28v19h-28z"/>
+  </defs>
+  <g fill="url(#green)" transform="translate(0 2)">
+    <use href="#ray" transform="rotate(-53 236 236)"/>
+    <use href="#ray" transform="rotate(-44 236 236)"/>
+    <use href="#ray" transform="rotate(-35 236 236)"/>
+    <use href="#ray" transform="rotate(-26 236 236)"/>
+    <use href="#ray" transform="rotate(-17 236 236)"/>
+    <use href="#ray" transform="rotate(-8 236 236)"/>
+    <use href="#ray"/>
+    <use href="#ray" transform="rotate(8 236 236)"/>
+    <use href="#ray" transform="rotate(17 236 236)"/>
+    <use href="#ray" transform="rotate(26 236 236)"/>
+    <use href="#ray" transform="rotate(35 236 236)"/>
+    <use href="#ray" transform="rotate(44 236 236)"/>
+    <use href="#ray" transform="rotate(53 236 236)"/>
+    <use href="#ray" transform="rotate(62 236 236)"/>
+    <use href="#ray" transform="rotate(71 236 236)"/>
+    <use href="#ray" transform="rotate(80 236 236)"/>
+    <use href="#ray" transform="rotate(89 236 236)"/>
+    <use href="#ray" transform="rotate(98 236 236)"/>
+    <use href="#ray" transform="rotate(107 236 236)"/>
+    <use href="#ray" transform="rotate(116 236 236)"/>
+    <use href="#ray" transform="rotate(125 236 236)"/>
+    <use href="#ray" transform="rotate(134 236 236)"/>
+    <use href="#ray" transform="rotate(143 236 236)"/>
+    <use href="#ray" transform="rotate(152 236 236)"/>
+    <use href="#ray" transform="rotate(161 236 236)"/>
+    <use href="#ray" transform="rotate(170 236 236)"/>
+    <use href="#ray" transform="rotate(179 236 236)"/>
+    <use href="#ray" transform="rotate(188 236 236)"/>
+    <use href="#ray" transform="rotate(197 236 236)"/>
+    <use href="#ray" transform="rotate(206 236 236)"/>
+    <use href="#ray" transform="rotate(215 236 236)"/>
+    <use href="#ray" transform="rotate(224 236 236)"/>
+    <use href="#ray" transform="rotate(233 236 236)"/>
+    <use href="#ray" transform="rotate(242 236 236)"/>
+    <use href="#ray" transform="rotate(251 236 236)"/>
+    <use href="#ray" transform="rotate(260 236 236)"/>
+    <use href="#ray" transform="rotate(269 236 236)"/>
+    <use href="#ray" transform="rotate(278 236 236)"/>
+    <use href="#ray" transform="rotate(287 236 236)"/>
+    <use href="#ray" transform="rotate(296 236 236)"/>
+    <use href="#ray" transform="rotate(305 236 236)"/>
+    <use href="#ray" transform="rotate(314 236 236)"/>
+    <use href="#ray" transform="rotate(323 236 236)"/>
+    <use href="#ray" transform="rotate(332 236 236)"/>
+    <use href="#ray" transform="rotate(341 236 236)"/>
+    <use href="#ray" transform="rotate(350 236 236)"/>
+  </g>
+  <g fill="#292929" font-family="Montserrat, Avenir Next, Arial, sans-serif" font-weight="300">
+    <text x="183" y="306" font-size="174" letter-spacing="-10">Cannabicum</text>
+    <text x="399" y="397" font-size="49" letter-spacing="-2">Magyar Orvosi Kannabisz Konferencia</text>
+  </g>
+</svg>

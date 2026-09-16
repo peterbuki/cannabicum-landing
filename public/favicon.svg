@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cannabicum">
-  <rect width="64" height="64" rx="16" fill="#173d29"/>
-  <circle cx="32" cy="32" r="21" fill="none" stroke="#a8dc28" stroke-width="7" stroke-dasharray="3 6"/>
-  <circle cx="32" cy="32" r="9" fill="#f7f8f2"/>
+  <rect width="64" height="64" rx="14" fill="#fff"/>
+  <g fill="#63ad2e">
+    <path d="M30 4h6v9h-6zM44 7l6 2-3 9-6-2zM55 17l5 4-6 7-5-4zM60 31v6h-9v-6zM56 44l-5 4-6-7 5-4zM45 55l-6 2-3-9 6-2zM31 60h-6v-9h6zM18 56l-6-3 4-8 6 3zM8 46l-4-5 7-6 4 5zM4 33v-6h9v6zM8 19l4-5 7 6-4 5zM18 8l6-2 3 9-6 2z"/>
+  </g>
+  <circle cx="32" cy="32" r="13" fill="#fff"/>
 </svg>
