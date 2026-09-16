@@ -4,10 +4,16 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
   workflow_dispatch:
 
 jobs:
   deploy:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -33,4 +39,45 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           channelId: live
+          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+
+  preview:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Set preview channel ID
+        id: channel
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: echo "channel_id=pr-${PR_NUMBER}-${HEAD_SHA:0:7}" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy preview to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          channelId: ${{ steps.channel.outputs.channel_id }}
+          expires: 7d
           projectId: ${{ vars.FIREBASE_PROJECT_ID }}

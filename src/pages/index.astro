@@ -9,8 +9,7 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <nav class="nav shell" aria-label="Fő navigáció">
       <a class="brand" href="/" aria-label="Cannabicum kezdőlap">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>Cannabicum</span>
+        <img src="/logo.svg" alt="Cannabicum" />
       </a>
       <a class="nav-cta" href="#kapcsolat">Kapcsolat <span>↘</span></a>
     </nav>
@@ -25,11 +24,11 @@ import Layout from "../layouts/Layout.astro";
         </p>
         <a class="primary-button" href="#kapcsolat">Értesítést kérek <span>↗</span></a>
       </div>
-      <div class="hero-visual" aria-label="Cannabicum logó">
-        <div class="orbit orbit-outer"></div>
-        <div class="orbit orbit-inner"></div>
-        <div class="visual-word">cannabicum</div>
-        <p class="visual-caption">TUDOMÁNY<br /><span>×</span> EMBER<br /><strong>×</strong> JÖVŐ</p>
+      <div class="hero-visual">
+        <img
+          src="https://github.com/user-attachments/assets/bfaa0929-e678-4ca8-b476-630b7f57e9c8"
+          alt="Cannabicum – Magyar Orvosi Kannabisz Konferencia"
+        />
       </div>
     </section>
 
@@ -87,7 +86,7 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <footer class="footer shell">
-      <a class="brand" href="/" aria-label="Cannabicum kezdőlap"><span class="brand-mark" aria-hidden="true"></span><span>Cannabicum</span></a>
+      <a class="brand" href="/" aria-label="Cannabicum kezdőlap"><img src="/logo.svg" alt="Cannabicum" /></a>
       <p>Magyar Orvosi Kannabisz Konferencia</p>
       <a href="mailto:hello@cannabicum.hu">hello@cannabicum.hu</a>
     </footer>
@@ -102,8 +101,8 @@ import Layout from "../layouts/Layout.astro";
   :global(body) { margin: 0; background: #f7f8f2; }
   .shell { width: min(1240px, 100%); margin: auto; padding-left: 5vw; padding-right: 5vw; }
   .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; padding-bottom: 28px; }
-  .brand { display: inline-flex; align-items: center; gap: 10px; color: #151515; text-decoration: none; font-size: .9rem; font-weight: 800; letter-spacing: -.03em; }
-  .brand-mark { width: 25px; height: 25px; display: inline-block; border-radius: 50%; background: repeating-conic-gradient(#62bd18 0 9deg, transparent 9deg 17deg); mask: radial-gradient(circle, transparent 0 37%, #000 39%); }
+  .brand { display: inline-flex; align-items: center; color: #151515; text-decoration: none; }
+  .brand img { display: block; width: 148px; height: auto; }
   .nav-cta { color: #151515; text-decoration: none; font-size: .75rem; font-weight: 700; }
   .nav-cta span, .primary-button span, .notice-link span, button span { color: #61bb18; font-size: 1.2rem; margin-left: 20px; }
   .hero { display: grid; grid-template-columns: .9fr 1.1fr; gap: 5vw; align-items: center; min-height: 620px; padding-top: 70px; padding-bottom: 95px; }
@@ -114,13 +113,8 @@ import Layout from "../layouts/Layout.astro";
   h1 em, h2 em { color: #62b916; font-style: normal; }
   .intro { max-width: 390px; margin: 30px 0 0; color: #60665d; font-size: 1rem; line-height: 1.7; }
   .primary-button, button { display: inline-flex; align-items: center; border: 0; background: #151515; color: #f7f8f2; text-decoration: none; cursor: pointer; font: 700 .75rem "Manrope", sans-serif; padding: 17px 20px; margin-top: 34px; }
-  .hero-visual { position: relative; min-height: 470px; overflow: hidden; background: #d9efb8; }
-  .orbit { position: absolute; border: 18px dashed #62bd18; border-radius: 50%; transform: rotate(-18deg); }
-  .orbit-outer { width: 520px; height: 520px; top: -25px; left: -35px; }
-  .orbit-inner { width: 390px; height: 390px; top: 40px; left: 30px; border-width: 12px; border-color: #9bd220; }
-  .visual-word { position: absolute; left: 11%; top: 43%; color: #151515; font-size: clamp(2.3rem, 5.2vw, 5.4rem); font-weight: 400; letter-spacing: -.1em; }
-  .visual-caption { position: absolute; right: 25px; bottom: 24px; color: #37630f; font: .62rem/1.6 "DM Mono", monospace; letter-spacing: .13em; }
-  .visual-caption span { color: #f48b31; }.visual-caption strong { color: #151515; }
+  .hero-visual { display: flex; align-items: center; min-height: 470px; overflow: hidden; background: #fff; padding: 24px; }
+  .hero-visual img { display: block; width: 100%; height: auto; }
   .notice { background: #173d29; color: #f7f8f2; }
   .notice-inner { display: flex; align-items: center; gap: 24px; padding-top: 26px; padding-bottom: 26px; }
   .notice .eyebrow { margin: 0 0 5px; color: #a8dc28; }.notice h2 { font-size: clamp(1.4rem, 2.6vw, 2.4rem); letter-spacing: -.05em; }
@@ -138,7 +132,7 @@ import Layout from "../layouts/Layout.astro";
   button { align-self: flex-start; margin-top: 28px; }.contact-form small { margin-top: 16px; color: #4e653b; font-size: .65rem; }
   .footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 27px; padding-bottom: 30px; font-size: .68rem; }.footer p { color: #72786f; }.footer > a:last-child { color: #31571d; text-decoration: none; }
   @media (max-width: 700px) {
-    .hero, .about, .contact-grid { grid-template-columns: 1fr; }.hero { padding-top: 50px; padding-bottom: 60px; }.hero-visual { min-height: 350px; margin-top: 15px; }.orbit-outer { width: 390px; height: 390px; }.orbit-inner { width: 290px; height: 290px; }.visual-word { top: 43%; }
+    .hero, .about, .contact-grid { grid-template-columns: 1fr; }.hero { padding-top: 50px; padding-bottom: 60px; }.hero-visual { min-height: 250px; margin-top: 15px; padding: 12px; }
     .notice-inner { align-items: flex-start; flex-wrap: wrap; }.notice-link { margin-left: 37px; }.about { gap: 50px; padding-top: 80px; padding-bottom: 80px; }.contact-grid { gap: 55px; padding-top: 75px; padding-bottom: 75px; }.footer { align-items: flex-start; flex-direction: column; gap: 10px; }
   }
 </style>
